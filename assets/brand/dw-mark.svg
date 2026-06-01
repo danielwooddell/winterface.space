@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 512 512" role="img" aria-label="WInterface identity mark" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="edge" x1="76" y1="60" x2="436" y2="452" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="0.52" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="letters" x1="122" y1="150" x2="390" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="0.46" stop-color="#bfdbfe"/>
+      <stop offset="1" stop-color="#f0abfc"/>
+    </linearGradient>
+    <radialGradient id="surface" cx="32%" cy="20%" r="78%">
+      <stop offset="0" stop-color="#172554"/>
+      <stop offset="0.52" stop-color="#0b1024"/>
+      <stop offset="1" stop-color="#050816"/>
+    </radialGradient>
+    <filter id="edgeGlow" x="-16%" y="-16%" width="132%" height="132%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.22 0 0 0 0 0.74 0 0 0 0 0.97 0 0 0 0.34 0" result="color"/>
+      <feMerge><feMergeNode in="color"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="letterGlow" x="-12%" y="-18%" width="124%" height="136%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.56 0 0 0 0 0.36 0 0 0 0 0.96 0 0 0 0.34 0" result="color"/>
+      <feMerge><feMergeNode in="color"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="128" fill="url(#surface)"/>
+  <rect x="31" y="31" width="450" height="450" rx="121" fill="none" stroke="url(#edge)" stroke-width="7" opacity="0.9" filter="url(#edgeGlow)"/>
+  <rect x="45" y="45" width="422" height="422" rx="109" fill="none" stroke="#ffffff" stroke-width="1.15" opacity="0.12"/>
+  <path d="M118 176 L164 336 L205 212 L246 336 L293 176" fill="none" stroke="url(#letters)" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" filter="url(#letterGlow)"/>
+  <path d="M338 176 V336" fill="none" stroke="url(#letters)" stroke-width="46" stroke-linecap="round" filter="url(#letterGlow)"/>
+  <circle cx="338" cy="126" r="25" fill="url(#letters)" filter="url(#letterGlow)"/>
+</svg>
